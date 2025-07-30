@@ -1,0 +1,156 @@
+
+.navbar {
+  background-color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-links span,
+.nav-links button {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links span:hover,
+.nav-links button:hover {
+  color: #00bfff;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #29254f;
+  padding: 0.5rem;
+  list-style: none;
+  top: 120%;
+  left: 0;
+  border-radius: 5px;
+  min-width: 150px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  margin: 0.3rem 0;
+}
+
+.dropdown-content li a {
+  color: white;
+}
+
+.dropdown-content li a:hover {
+  color: #00bfff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    background: none;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+
+.center-toggle-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.center-toggle {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.center-toggle:hover {
+  background-color: #0055aa;
+}
+
+
+.page-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); 
+  padding: 2rem;
+  text-align: center;
+}
