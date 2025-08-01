@@ -22,7 +22,7 @@ export default function Navbar() {
     <>
       {/* NAVBAR */}
       <nav className="navbar">
-        <div className="logo">MyApp</div>
+        <div className="logo">Panchal Tanya</div>
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li><Link href="/">Home</Link></li>
